@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Hobby Calculator";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Let's see how much it'd take to learn what I know.</p>
+
+
+<div class="container">
+    <div class="form-group">
+        <label for="hours">Enter the number of hours:</label>
+        <input type="number" id="hours" class="form-control" min="1" placeholder="Enter hours">
+        <small id="hoursError" class="text-danger" style="display: none;">Please enter a positive number.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="rate">Hourly Rate ($):</label>
+        <input type="text" id="rate" class="form-control" value="10.50" readonly>
+    </div>
+
+    <button id="calculateBtn" class="btn btn-primary">Calculate Total</button>
+
+    <div class="form-group mt-3">
+        <label for="total">Total Cost ($):</label>
+        <input type="text" id="total" class="form-control" readonly>
+    </div>
+</div>
+
+<a  asp-area="" asp-controller="Home" asp-action="Index">Back Home</a>
+
+@section Scripts {
+    <script src="~/js/site.js"></script>
+}
